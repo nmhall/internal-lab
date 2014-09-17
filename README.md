@@ -9,14 +9,24 @@ structure: Just as you implement a new data structure by using *pre-existing* da
 structures, you implement a new control-flow structure by using pre-existing
 control-flow structures. 
 
-A more detailed description is below. Here are a few notes about this lab:
+A more detailed description is below. Here are a few notes about the control-
+flow structures:
 
-  - You **may not use any Scala libraries** to implement you control-flow
-  structures. In other words, neither `import` nor `extends` should appear in
-  your code (except for `extends App`).
-  - Resist the temptation to look for an answer online or in a book. The main
-  benefit of this lab is to start developing the thinking process that you
-  use to turn syntax into an implementation as an internal DSL.
+  - To maximize the fun, you **should not use any Scala libraries** to implement 
+  your control-flow structures. In other words, to do this lab, you won't
+  need `import` or `extends` (except for `extends App`).
+  - Some of the puzzles may be tricky at first. Keep at it, and talk to other
+  people about your ideas. Above all, resist the temptation to look for an 
+  answer online or in a book. The main
+  benefit of this lab is to start developing the thinking process that you'll
+  use to implement internal DSLs.
+  - The control-flow structures that you're asked to implement are very 
+  un-Scala-y! Their behavior essentially relies on mutable variables, which we 
+  try to avoid in traditional Scala. But, of course, this is not traditional 
+  Scala. This is subversive Scala :).
+
+Here are a few notes about the files for this lab:
+
   - You should follow the standard assignment workflow for the lab, so that you
   can issue a pull request to show off your work.
   - The files are set up for you to run `sbt eclipse`, so you can work in
@@ -24,10 +34,6 @@ A more detailed description is below. Here are a few notes about this lab:
   - Initially, the files won't compile because you haven't implemented the
   control-flow structures. You may want to comment out some of the code until
   you have a chance to implement your control-flow structure.
-  - The control-flow structures that you're asked to implement are very 
-  un-Scala-y! Their behavior essentially relies on mutable variables, which we 
-  try to avoid in traditional Scala. But, of course, this is not traditional 
-  Scala. This is subversive Scala :).
 
 ## Part 1: `loop_until`
 Implement a control-flow structure called `loop_until` that can be used like so:
@@ -97,7 +103,7 @@ condition is still true, it again executes the body and continues in this
 fashion until the condition becomes false.
 
 The `continue` control structure, when it appears inside a `while_c`, causes the
-program to jump directly to the top of the loop, where it will check the loop
+program to jump directly to the top of that loop, where it will check the loop
 condition again and continue on like normal.
 
 If `continue` appears outside a `while_c` loop, its behavior is undefined. So, 
@@ -114,9 +120,9 @@ Put your implementation in the file
 
 ## Bonus: Summations
 If you finish the first three parts of the lab, consider taking on this
-challenge: Design and implement a notation for mathematical summations that is a
-expressive as those used in math and is a close as possible to the notation that
-mathematicians would use.
+challenge: Design and implement a notation for mathematical summations that is as
+expressive as those used in math and is as close as possible to the notation that
+a mathematician would use.
 
 ## Bonus: Baysick
 Try your hand at implementing the syntax for
