@@ -12,12 +12,23 @@ package internal
 object RepeatUntil extends App {
   
   // define the new control-flow structure here
-
+  def repeat(body: => Unit) : Repeater = {
+	  new Repeater(body)
+  }
+	
   var i = 0
   repeat  {
       if ( (i % 2) == 0 )
           println(i)
       i += 1
   } until(i > 9)        
+}
+
+class Repeater (body: => Unit){
+  def until (test: => Boolean) {
+    while (!test) {
+      body
+    }
+  }
 }
 

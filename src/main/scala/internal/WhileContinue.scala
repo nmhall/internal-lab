@@ -9,7 +9,7 @@ package internal
  * 8
  */
 
-object WhileContinue extends App {
+/*object WhileContinue extends App {
 
   // define the new control-flow structures here
 
@@ -22,4 +22,4 @@ object WhileContinue extends App {
       println(i)
   }        
 
-}
+}*/
