@@ -9,9 +9,19 @@ package internal
  * 8
  */
 
-/*object WhileContinue extends App {
+object WhileContinue extends App {
 
   // define the new control-flow structures here
+  def continue = throw new Exception()
+  def while_c(test: => Boolean)(body: => Unit) {
+    while (test) {
+      try{
+    	body
+      } catch {
+        case e => ;
+      }
+    }
+  }
 
   var i = -1
 
@@ -22,4 +32,4 @@ package internal
       println(i)
   }        
 
-}*/
+}
