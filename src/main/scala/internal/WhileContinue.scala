@@ -1,3 +1,5 @@
+package internal
+
 /**
  * the loop body should execute 10 times and print:
  * 0
